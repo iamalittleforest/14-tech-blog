@@ -1,7 +1,5 @@
-// import important parts of sequelize library
+// import dependencies
 const { Model, DataTypes } = require('sequelize');
-
-// import database connection from connection.js
 const sequelize = require('../config/connection');
 
 // initialize Post model (table) by extending off Sequelize's Model class
