@@ -20,6 +20,7 @@ router.get('/', async(req, res) => {
       posts, 
       logged_in: req.session.logged_in 
     });
+
   } catch (err) {
     res.status(500).json(err);
   }
@@ -47,13 +48,35 @@ router.get('/post/:id', async(req, res) => {
       ...post,
       logged_in: req.session.logged_in
     });
+
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
 // dashboard route
+router.get('/dashboard', async(req, res) => {
+  try {
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      include: [
+        { 
+          model: Post,
+          attributes: ['title'] 
+        }
+      ],
+    });
 
-// login route
+    const user = userData.get({ plain: true });
+
+    res.render('dashboard', {
+      ...user,
+      logged_in: true
+    });
+
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 module.exports = router;
