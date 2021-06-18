@@ -4,29 +4,29 @@ const { Comment } = require('../models');
 // array of data for Comment class
 const commentData = [
   {
-    comment: '',
-    user_id: '',
-    post_id: ''
+    comment: `I found the content relatable. Eager to try this for my next project.`,
+    user_id: '4',
+    post_id: '1'
   },
   {
-    comment: '',
-    user_id: '',
-    post_id: ''
+    comment: `Insomnia! I used Insomia during my studies, so I might be biased.`,
+    user_id: '4',
+    post_id: '2'
   },
   {
-    comment: '',
-    user_id: '',
-    post_id: ''
+    comment: `Great arguments for both sides. I personally love them, but to each their own.`,
+    user_id: '1',
+    post_id: '5'
   },
   {
-    comment: '',
-    user_id: '',
-    post_id: ''
+    comment: `Can't wait to try these out!`,
+    user_id: '3',
+    post_id: '4'
   },
   {
-    comment: '',
-    user_id: '',
-    post_id: ''
+    comment: `I've used both, but my preference is Postman.`,
+    user_id: '2',
+    post_id: '2'
   }
 ];
 
