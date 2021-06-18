@@ -9,8 +9,8 @@ router.get('/', async(req, res) => {
       include: [
         {
           model: User,
-          attributes: ['username'],
-        },
+          attributes: ['username']
+        }
       ]
     });
 
@@ -33,7 +33,7 @@ router.get('/post/:id', async(req, res) => {
       include: [
         {
           model: User,
-          attributes: ['username'],
+          attributes: ['username']
         },
         {
           model: Comment,
@@ -45,30 +45,6 @@ router.get('/post/:id', async(req, res) => {
     const post = postData.get({ plain: true });
 
     res.render('post', { ...post, logged_in: req.session.logged_in });
-
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-// dashboard route
-router.get('/dashboard', async(req, res) => {
-  try {
-    const userData = await User.findByPk({
-      where: {
-        id: req.session.user_id
-      },
-      include: [
-        { 
-          model: Post,
-          attributes: ['title'] 
-        }
-      ],
-    });
-
-    const user = userData.get({ plain: true });
-
-    res.render('dashboard', { ...user, logged_in: true });
 
   } catch (err) {
     res.status(500).json(err);
