@@ -1,5 +1,5 @@
 // import User model
-const { Post: User } = require('../models');
+const { User } = require('../models');
 
 // array of data for User class
 const userData = [
