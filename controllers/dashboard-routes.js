@@ -31,5 +31,21 @@ router.get('/create', (req, res) => {
 });
 
 // edit post route
+router.get('/edit/:id', async(req, res) => {
+  try {
+    const postData = await Post.findByPk({
+      where: {
+        id: req.params.id
+      }
+    });
+
+    const post = postData.get({ plain: true });
+
+    res.render('edit-post', { ...post, logged_in: req.session.logged_in });
+
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 module.exports = router;
