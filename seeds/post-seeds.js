@@ -6,31 +6,31 @@ const postData = [
   {
     title: '',
     content: '',
-    user_id: '',
+    user_id: ''
   },
   {
     title: '',
     content: '',
-    user_id: '',
+    user_id: ''
   },
   {
     title: '',
     content: '',
-    user_id: '',
+    user_id: ''
   },
   {
     title: '',
     content: '',
-    user_id: '',
+    user_id: ''
   },
   {
     title: '',
     content: '',
-    user_id: '',
-  },
+    user_id: ''
+  }
 ];
 
-// create and insert mulitple instances of Category using categoryData
+// create and insert multiple Posts using postData
 const seedPosts = () => Post.bulkCreate(postData);
 
 module.exports = seedPosts;

@@ -25,7 +25,7 @@ const userData = [
   }
 ];
 
-// create and insert mulitple instances of Category using categoryData
+// create and insert multiple Users using userData
 const seedUsers = () => User.bulkCreate(userData);
 
 module.exports = seedUsers;
