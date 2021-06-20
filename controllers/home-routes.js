@@ -16,6 +16,7 @@ router.get('/', async(req, res) => {
 
     const posts = postData.map((post) => post.get({ plain: true }));
 
+    // res.status(200).json(postData);
     res.render('homepage', { posts, logged_in: req.session.logged_in });
 
   } catch (err) {
@@ -24,12 +25,9 @@ router.get('/', async(req, res) => {
 });
 
 // single post route
-router.get('/post/:id', async(req, res) => {
+router.get('/posts/:id', async(req, res) => {
   try {
-    const postData = await Post.findByPk({
-      where: {
-        id: req.params.id
-      },
+    const postData = await Post.findByPk(req.params.id, {
       include: [
         {
           model: User,
@@ -37,13 +35,18 @@ router.get('/post/:id', async(req, res) => {
         },
         {
           model: Comment,
-          attributes: ['comment']
+          attributes: ['comment'],
+          include: {
+            model: User,
+            attributes: ['username']
+          }
         }
       ]
     });
 
     const post = postData.get({ plain: true });
 
+    // res.status(200).json(postData);
     res.render('post', { ...post, logged_in: req.session.logged_in });
 
   } catch (err) {
