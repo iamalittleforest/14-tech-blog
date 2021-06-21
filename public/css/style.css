@@ -1,0 +1,77 @@
+/* header properties */
+.header-txt {
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  padding: 0;
+}    
+
+.header-bg {
+  background-color: #6930c3;
+}  
+
+/* post properties */
+.post-header {
+  display: flex;
+  justify-content: space-between;
+}    
+
+.post-title-txt {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 500;
+}    
+
+.post-user-txt {
+  color: #ffffff;
+  padding: 5px 0;
+}  
+
+.post-bg {
+  background-color: #5390d9;
+}
+
+/* comment properties */
+.comment-txt {
+  margin-bottom: 5px;
+}    
+
+.source-txt {
+  margin: 0;
+}    
+
+.comment-bg {
+  background-color: #48bfe3;
+}
+
+/* action properties */
+.action-txt {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 0;
+}            
+
+/* button properties */
+.btn-txt {
+  color: #ffffff;
+  font-weight: 500;
+}      
+
+.btn-bg {
+  background-color: #64dfdf;
+}
+
+/* other */
+.body-bg {
+  background-color: #e5e5e5;
+}
+
+.nav-link:link,
+.nav-link:visited,
+.nav-link:hover,
+.nav-link:active {
+  color: #ffffff;
+}
