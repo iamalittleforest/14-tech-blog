@@ -72,6 +72,11 @@
 .nav-link:link,
 .nav-link:visited,
 .nav-link:hover,
-.nav-link:active {
+.nav-link:active,
+.post-link:link,
+.post-link:visited,
+.post-link:hover,
+.post-link:active {
   color: #ffffff;
+  text-decoration: none;
 }
