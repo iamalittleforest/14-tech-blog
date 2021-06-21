@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,7 +33,7 @@
         <!-- render links based on login status -->
         {{#if logged_in}}
           <li class="nav-item px-3">
-            <a class="nav-link" id="logout" href="/logout">Logout</a>
+            <a class="nav-link" id="logout">Logout</a>
           </li>
         {{else}}
           <li class="nav-item px-3">
@@ -53,6 +54,7 @@
     </nav>
   </header>
 
+  <!-- main -->
   <main class="mb-3">
     <div class="container">
       <div class="row row-cols-1 g-2 align-item-center justify-content-center">
@@ -67,4 +69,5 @@
   <script src="./js/logout.js"></script>
   {{/if}}
 </body>
+
 </html>
