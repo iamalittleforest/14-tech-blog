@@ -2,6 +2,9 @@
 const router = require('express').Router();
 const { Post } = require('../../models');
 
+// import helper to prevent access unless user is logged in
+const withAuth = require('../../utils/auth');
+
 // GET all posts
 router.get('/', async(req, res) => {
   try {
@@ -45,7 +48,7 @@ router.post('/', async(req, res) => {
 });
 
 // UPDATE post by ID
-router.put('/:id', async(req, res) => {
+router.put('/:id', withAuth, async(req, res) => {
   try {
     const postData = await Post.update(
       {
@@ -71,7 +74,7 @@ router.put('/:id', async(req, res) => {
 });
 
 // DELETE post by ID
-router.delete('/:id', async(req, res) => {
+router.delete('/:id', withAuth, async(req, res) => {
   try {
     const postData = await Post.destroy({
       where: {
