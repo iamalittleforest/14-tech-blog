@@ -1,4 +1,5 @@
 <!-- create-post -->
+{{#if logged_in}}
 <div class="col">
   <div class="card m-2">
     <div class="card-header post-bg">
@@ -20,9 +21,9 @@
   </div>
 </div>
 
-<!-- new post button -->
 <div class="text-center">
   <button class="btn btn-bg btn-txt" type="button">+ New Post</button>
 </div>
 
 <script src="./js/create-post.js"></script>
+{{/if}}

@@ -2,6 +2,7 @@
 {{> post}}
 
 <!-- create comment -->
+{{#if logged_in}}
 <div class="col">
   <div class="card m-2">
     <div class="card-header comment-bg">
@@ -20,3 +21,4 @@
 </div>
 
 <script src="./js/create-comment.js"></script>
+{{/if}}
