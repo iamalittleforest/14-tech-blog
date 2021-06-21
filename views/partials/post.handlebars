@@ -1,12 +1,14 @@
 <!-- view-post -->
+{{#each post as |post|}}
 <div class="col">
   <div class="card m-2">
     <div class="card-header post-header post-bg">
-      <span class="post-title-txt">Post Title</span>
-      <span class="post-user-txt">Posted by User on Date</span>
+      <span class="post-title-txt">{{title}}</span>
+      <span class="post-user-txt">Posted by {{user.username}} on {{format_date date_created}}</span>
     </div>
     <div class="card-body body-bg">
-      Post Content
+      {{content}}
     </div>
   </div>
 </div>
+{{/each}}
