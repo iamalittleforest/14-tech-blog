@@ -3,8 +3,23 @@ const loginHandler = async (event) => {
   event.preventDefault();
 
   // collect inputs
-  const email = document.querySelector('#username-login').value.trim();
+  const name = document.querySelector('#username-login').value.trim();
   const password = document.querySelector('#password-login').value.trim();
+  
+  if (email && password) {
+    const response = await fetch('/api/users/login', {
+      method: 'POST',
+      body: JSON.stringify({ name, password }),
+      headers: { 'Content-Type': 'application/json' },
+    });
+
+    // redirect to dashboard if sign up is successful
+    if (response.ok) {
+      document.location.replace('/dashboard');
+    } else {
+      alert(response.statusText);
+    }
+  }
 };
 
 // listen for submit
