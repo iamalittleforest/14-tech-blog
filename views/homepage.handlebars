@@ -36,18 +36,8 @@
     <div class="container">
       <div class="row row-cols-1 g-2 align-item-center justify-content-center">
         <!-- render posts-->
-        {{#each post as |post|}}
-        <div class="col">
-          <div class="card m-2">
-            <div class="card-header post-header post-bg">
-              <span class="post-title-txt">{{title}}</span>
-              <span class="post-user-txt">Posted by {{user.username}} on {{format_date date_created}}</span>
-            </div>
-            <div class="card-body body-bg">
-              {{content}}
-            </div>
-          </div>
-        </div>
+        {{#each posts as |post|}}
+        {{> post}}
         {{/each}}
       </div>
     </div>
