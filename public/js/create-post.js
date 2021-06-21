@@ -3,15 +3,15 @@ const createPostHandler = async (event) => {
   event.preventDefault();
 
   // collect inputs
-  const postTitle = document.querySelector('#create-post-title').value.trim();
-  const postContent = document.querySelector('#create-post-content').value.trim();
-  // console.log(postTitle, postContent);
+  const title = document.querySelector('#create-post-title').value.trim();
+  const content = document.querySelector('#create-post-content').value.trim();
+  // console.log(title, content);
   
-  if (postTitle && postContent) {
+  if (title && content) {
     const response = await fetch('/api/posts', {
       method: 'POST',
-      body: JSON.stringify({ postTitle, postContent }),
-      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ title, content }),
+      headers: { 'Content-Type': 'application/json' }
     });
 
     // redirect to dashboard if sign up is successful
