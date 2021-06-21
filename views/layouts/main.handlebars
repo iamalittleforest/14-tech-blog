@@ -53,8 +53,14 @@
     </nav>
   </header>
 
-  <!-- render sublayout -->
-  {{{ body }}}
+  <main class="mb-3">
+    <div class="container">
+      <div class="row row-cols-1 g-2 align-item-center justify-content-center">
+        <!-- render sublayout -->
+        {{{ body }}}
+      </div>
+    </div>
+  </main>
 
   <!-- if the user is logged in, render logout script -->
   {{#if logged_in}}
