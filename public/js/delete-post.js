@@ -3,7 +3,7 @@ const deletePostHandler = async (event) => {
   event.preventDefault();
 
   // collect inputs
-  const id = document.querySelector('#edit-post-id').value.trim();
+  const id = window.location.toString().split('/').slice(-1)[0];
   // console.log(id);
   
   if (id) {

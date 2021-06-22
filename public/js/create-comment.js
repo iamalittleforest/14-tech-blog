@@ -5,7 +5,7 @@ const createCommentHandler = async (event) => {
   // collect inputs
   const comment = document.querySelector('#create-comment').value.trim();
   const post_id = window.location.toString().split('/').slice(-1)[0];
-  // console.log(commentBody);
+  // console.log(comment, post_id);
 
   if (comment && post_id) {
     const response = await fetch('/api/comments', {

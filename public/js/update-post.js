@@ -3,7 +3,7 @@ const updatePostHandler = async (event) => {
   event.preventDefault();
 
   // collect inputs
-  const id = document.querySelector('#edit-post-id').value.trim();
+  const id = window.location.toString().split('/').slice(-1)[0];
   const title = document.querySelector('#edit-post-title').value.trim();
   const content = document.querySelector('#edit-post-content').value.trim();
   // console.log(id, title, content);
@@ -15,9 +15,9 @@ const updatePostHandler = async (event) => {
       headers: { 'Content-Type': 'application/json' }
     });
 
-    // redirect to dashboard if post update is successful
+    // reload if comment update is successful
     if (response.ok) {
-      document.location.replace('/dashboard');
+      location.reload();
     } else {
       alert(response.statusText);
     }
