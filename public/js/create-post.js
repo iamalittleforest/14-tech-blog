@@ -14,7 +14,7 @@ const createPostHandler = async (event) => {
       headers: { 'Content-Type': 'application/json' }
     });
 
-    // redirect to dashboard if sign up is successful
+    // redirect to dashboard if post creation is successful
     if (response.ok) {
       document.location.replace('/dashboard');
     } else {
