@@ -12,19 +12,14 @@ router.get('/', withAuth, async(req, res) => {
       where: {
         user_id: req.session.user_id
       },
-      include: [
-        {
-          model: User,
-          attributes: ['username']
-        }
-      ]
+      include: [{ model: User }]
     });
 
     // serialize the data
     const posts = postData.map((post) => post.get({ plain: true }));
     
     // res.status(200).json(postData);
-    res.render('dashboard', { ...posts, logged_in: req.session.logged_in });
+    res.render('dashboard', { posts, logged_in: req.session.logged_in });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -39,12 +34,7 @@ router.get('/create', withAuth, (req, res) => {
 router.get('/edit/:id', withAuth, async(req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: ['username']
-        }
-      ]
+      include: [{ model: User, attributes: ['username'] }]
     });
 
     // serialize the data

@@ -6,12 +6,7 @@ const { Comment, Post, User } = require('../models');
 router.get('/', async(req, res) => {
   try {
     const postData = await Post.findAll({
-      include: [
-        {
-          model: User,
-          attributes: ['username']
-        }
-      ]
+      include: [{ model: User }]
     });
 
     // serialize the data
@@ -30,18 +25,8 @@ router.get('/posts/:id', async(req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
       include: [
-        {
-          model: User,
-          attributes: ['username']
-        },
-        {
-          model: Comment,
-          attributes: ['comment'],
-          include: {
-            model: User,
-            attributes: ['username']
-          }
-        }
+        { model: User },
+        { model: Comment, include: { model: User } }
       ]
     });
 
