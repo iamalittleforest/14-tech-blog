@@ -9,7 +9,7 @@
 }    
 
 .header-bg {
-  background-color: #6930c3;
+  background-color: #ea698b;
 }  
 
 /* post properties */
@@ -30,7 +30,7 @@
 }  
 
 .post-bg {
-  background-color: #5390d9;
+  background-color: #c05299;
 }
 
 /* comment properties */
@@ -43,7 +43,7 @@
 }    
 
 .comment-bg {
-  background-color: #48bfe3;
+  background-color: #973aa8;
 }
 
 /* action properties */
@@ -61,7 +61,12 @@
 }      
 
 .btn-bg {
-  background-color: #64dfdf;
+  background-color: #6411ad;
+}
+
+.btn-bg:hover {
+  background-color: #47126b;
+  color: #ffffff;
 }
 
 /* other */
@@ -69,10 +74,12 @@
   background-color: #e5e5e5;
 }
 
+.nav-link,
 .nav-link:link,
 .nav-link:visited,
 .nav-link:hover,
 .nav-link:active,
+.post-link,
 .post-link:link,
 .post-link:visited,
 .post-link:hover,
