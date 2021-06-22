@@ -24,5 +24,5 @@ const updatePostHandler = async (event) => {
   }
 };
 
-// listen for submit
-document.querySelector('.edit-post-form').addEventListener('submit', updatePostHandler);
+// listen for click
+document.querySelector('#update-post-btn').addEventListener('click', updatePostHandler);
