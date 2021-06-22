@@ -21,4 +21,4 @@ const deletePostHandler = async (event) => {
 };
 
 // listen for submit
-document.querySelector('.update-post-form').addEventListener('submit', deletePostHandler);
+document.querySelector('.edit-post-form').addEventListener('submit', deletePostHandler);
