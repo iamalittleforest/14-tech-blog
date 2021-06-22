@@ -15,9 +15,9 @@ const updatePostHandler = async (event) => {
       headers: { 'Content-Type': 'application/json' }
     });
 
-    // show updated post if post update is successful
+    // redirect to dashboard if post update is successful
     if (response.ok) {
-      document.location.replace(`/posts/${id}`);
+      document.location.replace(`/dashboard`);
     } else {
       alert(response.statusText);
     }
