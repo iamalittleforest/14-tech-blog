@@ -1,13 +1,14 @@
 # 14 Tech Blog
 
 ## Link
-
+https://iamalittleforest-14-tech-blog.herokuapp.com/
 
 ## Languages & Technologies
 * Node.js
 * Bcrypt Package
 * Connect-Session-Sequelize Package
 * Dotenv Package
+* Express Package
 * Express-Handlebars Package
 * Express-Session Package
 * MySQL Package
@@ -15,7 +16,7 @@
 * Heroku
 
 ## Description
-This application can be used to publish  blog posts and comment on other blog posts as well.
+This application can be used to publish blog posts and comment on other blog posts.
 
 ### User Story
 
