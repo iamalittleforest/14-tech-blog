@@ -15,9 +15,9 @@ const updatePostHandler = async (event) => {
       headers: { 'Content-Type': 'application/json' }
     });
 
-    // reload if comment update is successful
+    // show updated post if post update is successful
     if (response.ok) {
-      location.reload();
+      document.location.replace(`/posts/${id}`);
     } else {
       alert(response.statusText);
     }
