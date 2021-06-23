@@ -67,6 +67,9 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 ## Screenshot
 <img src="assets/images/README-screenshot.png" alt="screenshot">
 
+## Demo
+<img src="assets/images/README-demo.gif" alt="demo">
+
 ## License
 MIT License
 
