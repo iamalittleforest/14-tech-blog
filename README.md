@@ -20,7 +20,7 @@ https://iamalittleforest-14-tech-blog.herokuapp.com/
 * Sequelize Package
 
 ## Description
-A CMS blog site that can be used to publish blog posts and comment on blog posts of other users.
+A CMS blog site that can be used to publish blog posts and comment on users' posts.
 
 ## Screenshot
 <img src="assets/images/README-screenshot.png" alt="screenshot">
