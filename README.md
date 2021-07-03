@@ -1,4 +1,4 @@
-# 14 Tech Blog
+# Tech Blog
 
 ## Link
 https://iamalittleforest-14-tech-blog.herokuapp.com/
@@ -20,7 +20,7 @@ https://iamalittleforest-14-tech-blog.herokuapp.com/
 * Sequelize Package
 
 ## Description
-This application can be used to publish blog posts and comment on other blog posts.
+A CMS blog site that can be used to publish blog posts and comment on blog posts of other users.
 
 ## Screenshot
 <img src="assets/images/README-screenshot.png" alt="screenshot">
